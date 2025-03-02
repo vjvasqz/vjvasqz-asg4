@@ -1,0 +1,88 @@
+<!-- Veronica Vasquez Hernandez -->
+<!-- vejavasq@gmail.com-->
+
+<!-- Notes to Grader: -->
+<!-- This is where I found my images: https://www.pixelpapercraft.com/papercraft/5072f7a563f1efb80100001e/snow-dirt-block
+I used this to help me on the spotlight : https://math.hws.edu/graphicsbook/c7/s2.html
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BlockyWorld: Snowy</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="numd">FPS:</div>
+
+    <button type="button" id="normalOn">Normal On</button>
+    <button type="button" id="normalOff">Normal Off</button>
+
+    <br>
+
+    <button id="lightingOn">Lighting On</button>
+    <button id="lightingOff">Lighting Off</button>
+
+
+    <br>
+    <button type="button" id="spotlightOn">Spotlight On</button>
+    <button type="button" id="spotlightOff">Spotlight Off</button>
+
+
+    <div class="control-label">Light Direction</div>
+      Light X <input type = "range" min = "-100" value="0" class="slider" id="lightSlideX">
+      Light Y <input type = "range" min = "-50" value="-200" class="slider" id="lightSlideY">
+      Light Z <input type = "range" min = "-100" value="-200" class="slider" id="lightSlideZ">
+
+    <br><br>
+    <div class="control-label">Light Color</div>
+      R <input type="range" id="lightColorR" min="0" max="100" value="100"> 
+      G <input type="range" id="lightColorG" min="0" max="100" value="100"> 
+      B <input type="range" id="lightColorB" min="0" max="100" value="100">
+
+    <br><br>
+    <div class="control-label">Spotlight Controls</div>
+    <p>
+      Position X <input type="range" id="spotlightPosX" min="-100" max="100" value="0"> 
+      Y <input type="range" id="spotlightPosY" min="-100" max="100" value="50"> 
+      Z <input type="range" id="spotlightPosZ" min="-100" max="100" value="0">
+    </p>
+    <p>
+      Direction X <input type="range" id="spotlightDirX" min="-100" max="100" value="0"> 
+      Y <input type="range" id="spotlightDirY" min="-100" max="100" value="-100"> 
+      Z <input type="range" id="spotlightDirZ" min="-100" max="100" value="0">
+    </p>
+    <p>
+      Cutoff Angle <input type="range" id="spotlightCutoff" min="75" max="95" value="90">
+    </p>
+    <p>
+      Color R <input type="range" id="spotlightColorR" min="0" max="100" value="0"> 
+      G <input type="range" id="spotlightColorG" min="0" max="100" value="50"> 
+      B <input type="range" id="spotlightColorB" min="0" max="100" value="100">
+    </p>
+
+
+
+    <!-- Files in Code -->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+
+    <script src="Cube.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Circle.js"></script>
+
+    <script src="Penguin1.js"></script>
+    <script src="BlockyWorld.js"></script>
+    <script src="Camera.js"></script>
+  </body>
+</html>
+
